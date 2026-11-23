@@ -1,0 +1,25 @@
+<html>
+    {% load static %}  <!-- REQUIRED -->
+<head>
+    <title>Home Page</title>
+    
+    
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">    
+</head>
+
+
+    
+<body>  
+    <h1>Statics files Home Page</h1>
+      <img src="{% static img1 %}" alt="Latest updates">
+
+    <h1>{{  head_msg }}</h1>
+<ul>
+    <li>{{ sub_msg1 }}</li>
+    <li>{{ sub_msg2 }}</li>
+    <li>{{ sub_msg3 }}</li>
+</ul>
+</body>
+</html>

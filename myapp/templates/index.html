@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       table,
+        td,
+        th{
+        border:1px dashed rgb(34, 218, 185);
+        padding:5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Django Templates examplee</h1>
+<p>Student Mark card.</p>
+
+<table>
+    <tr>
+    <th>Sno</th>
+    <th>Name</th>
+    <th>age</th>
+    <th>Vote Eligibility</th>
+    
+    
+    </tr>
+    {% for student in students %}
+    <tr>
+        <td>{{forloop.counter}}</td>
+        <td>{{student.name}}</td>
+        <td>{{student.age}}</td>
+          <td>
+            {% if  student.age  >= 18 %}
+            Eligible
+            {% else %}
+            Not Eligible
+            {% endif %}
+        </td>
+        
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
